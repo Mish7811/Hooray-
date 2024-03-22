@@ -1,0 +1,258 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    --firstC: #ff0000;
+    --secondC: #ff3385;
+    --thirdC: #009900;
+    --fourthC : #ffff1a;
+    
+}
+
+body{
+    background: #23E3C9;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 8px;
+    background-color: #000000d4;
+}
+
+nav .menu-img{
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+nav .logo-img{
+    width: 160px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+button{
+    background: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+}
+
+/* .textContainer{
+    margin: 50px 50px;
+    height: 750px;
+    border: #000 groove 5px;
+    box-shadow: 2px 2px #000000;
+    background-color: rgba(236, 0, 0, 0.266);
+} */
+
+.user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px; 
+}
+
+
+ /* HERO SECTION */
+.hero{
+    /* scale: 1.3; */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBg{
+    position: absolute;
+    z-index: -1; /* Place it behind other content */
+    margin: 0;
+    padding: 0;
+    /* width: 100%;
+    height: 70vh; */
+    height: 80vh;
+    width: 130vh;
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    animation: animate 30s ease-in infinite;
+    background-size: cover;
+    filter: blur(10px);
+    
+}
+/* .heroBgImg{
+    height: 70vh;
+    width: 95vh;
+    animation: animate 16s ease-in infinite;
+    background-size: cover;
+    filter: blur(8px);
+  -webkit-filter: blur(8px);
+} */
+@keyframes animate{
+    0%, 100%{
+        background-image: url(/Day2/marriage.jpg);
+    }
+    16%{
+        background-image: url(/Day2/holi.jpg);
+    }
+    32%{
+        background-image: url(Day2/deepam.jpg);
+    }
+    48%{
+        background-image: url(Day2/bday.jpg);
+    }
+    60%{
+        background-image: url(Day2/concert.jpg);
+    }
+    76%{
+        background-image: url(Day2/mrdni.jpg);
+    }
+}
+
+/* image slider code */
+
+.slider{
+    width: 1000px;
+    height: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+.slides{
+    width: 500%;
+    height: 700px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 1000px;
+    height: 700px; 
+    flex-shrink:0;
+    -webkit-flex-shrink: 0;
+    max-width:auto;
+    max-height:100%;
+    transition: transform 0.6s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.1); /* Increases the scale of the image on hover */
+     /* Adds smooth transition effect */
+  }
+
+.navManual{
+    position: absolute;
+    width: 800px;
+    margin-top:510px;
+    display: flex;
+    justify-content: center;
+}
+
+.manualBtn{
+    border: 1px solid #ff0d00;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manualBtn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manualBtn:hover{
+    background: #89ec8cd6;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
+#radio6:checked ~ .first{
+    margin-left: -100%;
+}
+
+.navAuto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 510px;
+}
+
+.navAuto div{
+    border: 1px solid #747028;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.navAuto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navAuto .autoBtn1{
+    background: #ff0d00;
+}
+#radio2:checked ~ .navAuto .autoBtn2{
+    background: #ff0d00;
+}
+#radio3:checked ~ .navAuto .autoBtn3{
+    background: #ff0d00;
+}
+#radio4:checked ~ .navAuto .autoBtn4{
+    background: #ff0d00;
+}
+#radio5:checked ~ .navAuto .autoBtn5{
+    background: #ff0d00;
+}
+#radio6:checked ~ .navAuto .autoBtn6{
+    background: #ff0d00;
+}
+
+
